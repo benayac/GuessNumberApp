@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".guess"
+    android:background="#202020">
+
+
+        <TextView
+            android:id="@+id/text_angka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:textColor="#FFFF"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_angka"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relative1">
+
+        <ImageButton
+            android:id="@+id/greater_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_greater"
+            android:layout_marginTop="40dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_below="@id/text_angka"
+            android:layout_toRightOf="@id/less_btn"
+            android:layout_marginHorizontal="20dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/less_btn"
+            android:src="@drawable/ic_less"
+            android:layout_below="@id/text_angka"
+            android:layout_marginTop="40dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginHorizontal="20dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/restart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:textColor="#FFFF"
+        android:background="@drawable/roundedbutton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@id/relative1"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="100dp"/>
+
+
+
+
+
+</RelativeLayout>
