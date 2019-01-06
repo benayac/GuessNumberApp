@@ -13,7 +13,7 @@ public class guess extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton lower_btn, bigger_btn;
     Button restart_btn;
-    int guess, x, y;
+    public int guess, x, y;
     TextView tv_guess;
 
     @Override

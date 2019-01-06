@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.*;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -17,7 +14,6 @@ public class MainActivity extends AppCompatActivity{
 
     ImageButton next;
     EditText upper, lower;
-    public int x,y,guess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +22,31 @@ public class MainActivity extends AppCompatActivity{
 
         next = findViewById(R.id.guess_btn);
 
+        upper = findViewById(R.id.upper_bound);
+        lower = findViewById(R.id.lower_bound);
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                openguess();
+                if(upper.getText().toString().length() > 0 && lower.getText().toString().length() > 0) {
+
+                    openguess();
+
+                } else {
+
+                    toast();
+
+                }
+
             }
         });
 
+    }
+
+    public void toast(){
+
+        Toast.makeText(this, "Please enter a boundary!", Toast.LENGTH_SHORT).show();
     }
 
     public void openguess(){
